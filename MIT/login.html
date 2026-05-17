@@ -1,0 +1,47 @@
+<!-- login.html -->
+<!-- Login page for existing users -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Login</title>
+<link rel="stylesheet" href="style.css" />
+<script src="script.js" defer></script>
+</head>
+
+<body>
+
+<header>
+  <h1>LagerSync</h1>
+
+  <!-- Shared navigation across entire app -->
+<nav id="mainNav"></nav>
+
+  <!-- User status (right side via CSS) -->
+  <p id="userBadge"></p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>Login</h2>
+
+    <!-- Login form -->
+    <form id="loginForm">
+      <label>Username</label>
+      <input id="loginUsername" type="text" required />
+
+      <label>Password</label>
+      <input id="loginPassword" type="password" required />
+
+      <button class="button" type="submit">Sign In</button>
+    </form>
+
+    <p id="authMsg"></p>
+  </div>
+
+</div>
+
+</body>
+</html>
