@@ -1,0 +1,49 @@
+<!-- chat.html -->
+<!-- Community chat page for user messages -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Community Chat</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+
+<body>
+
+<header>
+  <h1>LagerSync</h1>
+
+  <!-- Shared navigation -->
+<nav id="mainNav"></nav>
+
+  <p id="userBadge"></p>
+</header>
+
+<div class="container">
+
+  <h2>Community Chat</h2>
+
+  <!-- Chat input form -->
+  <div class="card">
+    <form id="chatForm">
+
+      <label for="chatUsername">Name</label>
+      <input id="chatUsername" maxlength="40" placeholder="Your name" required>
+
+      <label for="chatInput">Message</label>
+      <input id="chatInput" maxlength="300" placeholder="Type a message" required>
+
+      <button class="button" type="submit">Send</button>
+
+    </form>
+  </div>
+
+  <!-- Messages container -->
+  <div id="chatMessages" class="card"></div>
+
+</div>
+
+</body>
+</html>

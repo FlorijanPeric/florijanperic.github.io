@@ -1,0 +1,63 @@
+<!-- index.html -->
+<!-- Main dashboard showing logs and system stats -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LagerSync Dashboard</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+<script>
+  // Register Service Worker for offline caching (optional)
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js').catch(() => {
+      // Service Worker registration failed; app still works offline
+    });
+  }
+</script>
+</head>
+
+<body>
+
+<header>
+  <h1>LagerSync</h1>
+
+  <!-- Shared navigation -->
+<nav id="mainNav"></nav>
+
+  <p id="userBadge"></p>
+</header>
+
+<div class="container">
+
+  <h2>Available Log Loads</h2>
+
+  <!-- Stats overview -->
+  <div class="card">
+    <h3>Project Stats</h3>
+    <div id="statsPanel">Loading stats...</div>
+  </div>
+
+  <!-- Static sample loads -->
+  <div class="card">
+    <h3>Kočevje Area</h3>
+    <p>Owner: Private</p>
+    <p>Volume: 8 m³</p>
+    <a class="button" href="accept.html">View Transport</a>
+  </div>
+
+  <div class="card">
+    <h3>Ribnica Area</h3>
+    <p>Owner: SIDG</p>
+    <p>Volume: 12 m³</p>
+    <a class="button" href="accept.html">View Transport</a>
+  </div>
+
+  <!-- Dynamic logs -->
+  <div id="logsContainer"></div>
+
+</div>
+
+</body>
+</html>
